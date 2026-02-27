@@ -48,6 +48,9 @@ int main(void) {
     float bill = 0.0;
     int customerType;
 
+    float over_200;
+    float over_300;
+
     printf("Enter units consumed: ");
     scanf("%f", &units);
 
@@ -60,6 +63,16 @@ int main(void) {
         bill = units * 2.0;
 		// to do
     }
+    if ((units > 100) && (units <= 200)){
+        over_200 = units - 100;
+        bill = over_200 * 3.5;
+        bill = bill + 200;
+    }
+    if (units > 200){
+        over_300 = units - 100;
+        bill = over_300 * 5;
+        bill = bill + 550;
+    }
 
     /* subtask 2: apply surcharge based on customer type */
 	// complete your code here
@@ -67,7 +80,12 @@ int main(void) {
         case 1:
             // to do
 			break;
-
+        case 2:
+            bill = bill + (bill * 0.1);
+            break;
+        case 3:
+            bill = bill + (bill * 0.2);
+            break;
         default:
             printf("Invalid customer type\n");
             return 1;
