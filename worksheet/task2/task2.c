@@ -23,7 +23,7 @@ int main(void){
 	while (hex[i] != '\0') {
 		//checks that all values must be allowed in hex
         if (!((hex[i] >= '0' && hex[i] <= '9') || (hex[i] >= 'a' && hex[i] <= 'f') || (hex[i] >= 'A' && hex[i] <= 'F'))) {
-            printf("Invalid Hexadecimal\n");
+            printf("Error Invalid Hexadecimal\n");
 			//terminate
 			return 0;
         }
