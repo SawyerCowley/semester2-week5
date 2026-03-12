@@ -13,7 +13,7 @@ int main(void){
 	long decimal=0;
 	char hex[9];
 	
-	printf("Enter a hexadecimal:");
+	printf("Enter a hexadecimal:\n");
 
 	// if input contains invalid hex digit
 	// printf("Error: Invalid Hexadecimal\n");
